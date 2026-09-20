@@ -4,6 +4,11 @@ A single-page concept landing page that reimagines **National Geographic** as a 
 
 > **Disclaimer:** This is a concept project created for educational and portfolio purposes. It is not affiliated with, endorsed by, or associated with National Geographic Partners, LLC.
 
+## Live Demo
+Link: https://natgeo-play.vercel.app/
+<img width="2656" height="1642" alt="Screenshot 2026-09-20 at 11 30 51 PM" src="https://github.com/user-attachments/assets/ee98b07c-8269-4cbc-93fb-ffce1d6721a6" />
+
+
 ## Features
 
 - Cinematic expedition-themed hero section
