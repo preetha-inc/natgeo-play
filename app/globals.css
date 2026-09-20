@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0E1512;
+  color: #F2EEE2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #FFC72C;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Signature: torn-specimen / field-tag card frame */
+.field-frame {
+  position: relative;
+  border: 1px solid #24322C;
+  background: #131C18;
+}
+
+.field-frame::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(255, 199, 44, 0.35);
+  pointer-events: none;
+}
+
+/* Corner crop marks, echoes the NatGeo yellow-frame magazine cover */
+.crop-marks::before,
+.crop-marks::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #FFC72C;
+  border-left: 2px solid #FFC72C;
+  top: -1px;
+  left: -1px;
+}
+
+.crop-marks::after {
+  top: auto;
+  left: auto;
+  bottom: -1px;
+  right: -1px;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid #FFC72C;
+  border-right: 2px solid #FFC72C;
+}
+
+/* Expedition stamp badge (replaces generic star ratings) */
+.stamp {
+  transform: rotate(-6deg);
+  border: 2px solid #B5502F;
+  color: #B5502F;
+}
+
+/* Horizontal scroll carousel, no scrollbar clutter on desktop */
+.carousel {
+  scrollbar-width: thin;
+  scrollbar-color: #FFC72C #131C18;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel::-webkit-scrollbar-track {
+  background: #131C18;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #E8A317;
+  border-radius: 8px;
+}
+
+/* Topographic line texture used behind hero/sections */
+.topo-lines {
+  background-image: repeating-radial-gradient(
+    circle at 30% 40%,
+    rgba(242, 238, 226, 0.035) 0px,
+    rgba(242, 238, 226, 0.035) 1px,
+    transparent 1px,
+    transparent 34px
+  );
+}
